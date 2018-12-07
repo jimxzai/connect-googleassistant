@@ -5,3 +5,4 @@
 ## for windows platform please following the instruction
 ## for Mac platform please following the instruction
 ## for Linux or Rasberry Pi platform please following the instruction
+project-aiy-voice-224701_Linux.txt
