@@ -1,0 +1,163 @@
+
+
+
+https://console.developers.google.com/apis/api/embeddedassistant.googleapis.com/overview?pli=1
+
+
+client_id
+1000399070010-22a5guscb1o61vujkfhvilojafmmi8pk.apps.googleusercontent.com
+client_secret FKTZhrgs7HWRtBQZNeLMLYYF
+
+
+
+#save credentials
+
+(py36) jims-MacBook-Pro:ces jimxiao$ google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype --save --headless --client-secrets client_secret_1000399070010-22a5guscb1o61vujkfhvilojafmmi8pk.apps.googleusercontent.com.json
+Please visit this URL to authorize this application: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=1000399070010-22a5guscb1o61vujkfhvilojafmmi8pk.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fassistant-sdk-prototype&state=Me2iG3l8hAOvOpC44OhTLse8SNyyFc&prompt=consent&access_type=offline
+Enter the authorization code: 4/qwClO5mWuJdiYF_hdgvd45j7vFCdjaGZ1NdHn0OwiJhLBi2kcMuKwuA
+credentials saved: /Users/jimxiao/Library/Application Support/google-oauthlib-tool/credentials.json
+
+#get token
+
+(py36) jims-MacBook-Pro:ces jimxiao$ google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype --client-secrets client_secret_1000399070010-22a5guscb1o61vujkfhvilojafmmi8pk.apps.googleusercontent.com.json
+Please visit this URL to authorize this application: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=1000399070010-22a5guscb1o61vujkfhvilojafmmi8pk.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2F&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fassistant-sdk-prototype&state=fIYHjo9FPV9qjFXsL9buyCr7zY3l4s&access_type=offline
+{"token": "ya29.GltqBrzhVX0HyFseIwWrsZwmDh4aMjgujTm48JKbEqkhPqvBp46_rkcClXEZav3pVuB2-khjctbFbCU3vQiTko3BsVwrGcS8ABMWwfd-eD3N2fAd-PUxhRHeDRlE", "refresh_token": "1/KNC8Z-l1NN_O4RCf53BB2YiwX1xxvqdX9Z2iNFT0t_k", "token_uri": "https://www.googleapis.com/oauth2/v3/token", "client_id": "1000399070010-22a5guscb1o61vujkfhvilojafmmi8pk.apps.googleusercontent.com", "client_secret": "FKTZhrgs7HWRtBQZNeLMLYYF", "scopes": ["https://www.googleapis.com/auth/assistant-sdk-prototype"]}
+
+
+#obtain token to register device:
+
+(py37) C:\Users\test\ces>google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype --headless --client-secrets client_secret_1000399070010-22a5guscb1o61vujkfhvilojafmmi8pk.apps.googleusercontent.com.json
+Please visit this URL to authorize this application: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=1000399070010-22a5guscb1o61vujkfhvilojafmmi8pk.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fassistant-sdk-prototype&state=JByo0hYX2IecIT9ZpMqZfbydyqC1yQ&prompt=consent&access_type=offline
+Enter the authorization code: 4/qwA_-eZudbScShCybyWjJrAQ1D4li5Aj9jsOOymU5KueWtCmYEJY72g
+{"token": "ya29.GltqBuuu2geoUVSfg5ntz_F-8wDQImBc0setZYehU0H-dDW4HooWbFFHOduxnqOy-SEstN7c2IURcb4NOlY9DIqz_zmWNB-uyKzQJJo6tJ_XrSKyBQ4BimlzVvYg", "refresh_token": "1/XR32xAih96N2w--v0T_EglRcjP2NHTchqaXuA1ON_eg", "token_uri": "https://www.googleapis.com/oauth2/v3/token", "client_id": "1000399070010-22a5guscb1o61vujkfhvilojafmmi8pk.apps.googleusercontent.com", "client_secret": "FKTZhrgs7HWRtBQZNeLMLYYF", "scopes": ["https://www.googleapis.com/auth/assistant-sdk-prototype"]}
+
+token="ya29.GltqBuuu2geoUVSfg5ntz_F-8wDQImBc0setZYehU0H-dDW4HooWbFFHOduxnqOy-SEstN7c2IURcb4NOlY9DIqz_zmWNB-uyKzQJJo6tJ_XrSKyBQ4BimlzVvYg"
+
+registration device.json
+{
+  "project_id": "aiy-voice-224701",
+  "device_model_id": "aiy-voice-224701-prototype-light-v1",
+  "manifest": {
+    "manufacturer": "Assistant SDK developer",
+    "product_name": "Assistant SDK light",
+    "device_description": "Assistant SDK light device"
+  },
+  "device_type": "action.devices.types.LIGHT",
+  "traits": ["action.devices.traits.OnOff"]
+}
+
+token:
+{
+  "token": "ya29.GltqBuuu2geoUVSfg5ntz_F-8wDQImBc0setZYehU0H-dDW4HooWbFFHOduxnqOy-SEstN7c2IURcb4NOlY9DIqz_zmWNB-uyKzQJJo6tJ_XrSKyBQ4BimlzVvYg",
+  "refresh_token": "1/XR32xAih96N2w--v0T_EglRcjP2NHTchqaXuA1ON_eg",
+  "token_uri": "https://www.googleapis.com/oauth2/v3/token",
+  "client_id": "1000399070010-22a5guscb1o61vujkfhvilojafmmi8pk.apps.googleusercontent.com",
+  "client_secret": "FKTZhrgs7HWRtBQZNeLMLYYF",
+  "scopes": [
+    "https://www.googleapis.com/auth/assistant-sdk-prototype"
+  ]
+}
+
+
+#register
+curl -s -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ya29.GltqBrzhVX0HyFseIwWrsZwmDh4aMjgujTm48JKbEqkhPqvBp46_rkcClXEZav3pVuB2-khjctbFbCU3vQiTko3BsVwrGcS8ABMWwfd-eD3N2fAd-PUxhRHeDRlE" -d @device_model.json https://embeddedassistant.googleapis.com/v1alpha2/projects/aiy-voice-224701/deviceModels/
+
+{
+  "deviceModelId": "aiy-voice-224701-prototype-light-v1",
+  "projectId": "aiy-voice-224701",
+  "manifest": {
+    "manufacturer": "Assistant SDK developer",
+    "productName": "Assistant SDK light",
+    "deviceDescription": "Assistant SDK light device"
+  },
+  "name": "projects/aiy-voice-224701/deviceModels/aiy-voice-224701-prototype-light-v1",
+  "deviceType": "action.devices.types.LIGHT",
+  "traits": [
+    "action.devices.traits.OnOff"
+  ],
+  "executionModes": [
+    "DIRECT_RESPONSE"
+  ],
+  "lastUpdatedTime": "2018-12-06T18:54:48.288857540Z"
+}
+
+
+#get 
+(py36) jims-MacBook-Pro:ces jimxiao$ curl -s -X GET -H "Content-Type: application/json" -H "Authorization: Bearer ya29.GltqBrzhVX0HyFseIwWrsZwmDh4aMjgujTm48JKbEqkhPqvBp46_rkcClXEZav3pVuB2-khjctbFbCU3vQiTko3BsVwrGcS8ABMWwfd-eD3N2fAd-PUxhRHeDRlE" https://embeddedassistant.googleapis.com/v1alpha2/projects/aiy-voice-224701/deviceModels/aiy-voice-224701-prototype-light-v1
+{
+  "deviceModelId": "aiy-voice-224701-prototype-light-v1",
+  "projectId": "aiy-voice-224701",
+  "manifest": {
+    "manufacturer": "Assistant SDK developer",
+    "productName": "Assistant SDK light",
+    "deviceDescription": "Assistant SDK light device"
+  },
+  "name": "projects/aiy-voice-224701/deviceModels/aiy-voice-224701-prototype-light-v1",
+  "deviceType": "action.devices.types.LIGHT",
+  "traits": [
+    "action.devices.traits.OnOff"
+  ],
+  "executionModes": [
+    "DIRECT_RESPONSE"
+  ],
+  "lastUpdatedTime": "2018-12-06T18:54:48.288857540Z"
+}
+
+
+#list
+(py36) jims-MacBook-Pro:ces jimxiao$ curl -s -X GET -H "Content-Type: application/json" -H "Authorization: Bearer ya29.GltqBrzhVX0HyFseIwWrsZwmDh4aMjgujTm48JKbEqkhPqvBp46_rkcClXEZav3pVuB2-khjctbFbCU3vQiTko3BsVwrGcS8ABMWwfd-eD3N2fAd-PUxhRHeDRlE" https://embeddedassistant.googleapis.com/v1alpha2/projects/aiy-voice-224701/deviceModels/
+{
+  "deviceModels": [
+    {
+      "deviceModelId": "aiy-voice-224701-prototype-light-v1",
+      "projectId": "aiy-voice-224701",
+      "manifest": {
+        "manufacturer": "Assistant SDK developer",
+        "productName": "Assistant SDK light",
+        "deviceDescription": "Assistant SDK light device"
+      },
+      "name": "projects/aiy-voice-224701/deviceModels/aiy-voice-224701-prototype-light-v1",
+      "deviceType": "action.devices.types.LIGHT",
+      "traits": [
+        "action.devices.traits.OnOff"
+      ],
+      "executionModes": [
+        "DIRECT_RESPONSE"
+      ],
+      "lastUpdatedTime": "2018-12-06T18:54:48.288857540Z"
+    }
+  ]
+}
+#run
+googlesamples-assistant-pushtotalk --project-id aiy-voice-224701 --device-model-id aiy-voice-224701-prototype-light-v1
+(py36) jims-MacBook-Pro:ces jimxiao$ googlesamples-assistant-pushtotalk --project-id aiy-voice-224701 --device-model-id aiy-voice-224701-prototype-light-v1
+INFO:root:Connecting to embeddedassistant.googleapis.com
+WARNING:root:Device config not found: [Errno 2] No such file or directory: '/Users/jimxiao/Library/Application Support/googlesamples-assistant/device_config.json'
+INFO:root:Registering device
+INFO:root:Device registered: 8504e9f4-f995-11e8-8c44-c4b301d48771
+Press Enter to send a new request...
+INFO:root:Recording audio request.
+INFO:root:Transcript of user request: "Humvee".
+INFO:root:Transcript of user request: "Humphrey".
+INFO:root:Transcript of user request: "Humvee".
+INFO:root:Transcript of user request: "I'm feeling".
+INFO:root:Transcript of user request: "I'm finna".
+INFO:root:Transcript of user request: "I'm feeling".
+INFO:root:Transcript of user request: "I'm Feenin".
+INFO:root:Transcript of user request: "I'm feeling a".
+INFO:root:Transcript of user request: "I'm feeling lucky".
+INFO:root:Transcript of user request: "I'm  feeling lucky".
+INFO:root:Transcript of user request: "I'm feeling  lucky".
+INFO:root:Transcript of user request: "I'm feeling lucky".
+INFO:root:End of audio request detected.
+INFO:root:Stopping recording.
+INFO:root:Transcript of user request: "I'm feeling lucky".
+INFO:root:Expecting follow-on query from user.
+INFO:root:Playing assistant response.
+INFO:root:Finished playing assistant response.
+INFO:root:Recording audio request.
+
+--for the source code:
+https://github.com/googlesamples/assistant-sdk-python/tree/master/google-assistant-sdk/googlesamples/assistant/grpc
+
+python -m pushtotalk --project-id aiy-voice-224701 --device-model-id aiy-voice-224701-prototype-light-v1
