@@ -1,4 +1,4 @@
-#How to connect to google assistant for NLP and automated Action
+# How to connect to google assistant for NLP and automated Action
 
 This is the verified detail steps on how to connect to Google assistant using gRpc. The following 3 environments have been tested:
 Windows 10; 
