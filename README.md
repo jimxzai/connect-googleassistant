@@ -1,6 +1,6 @@
-# connect-googleassistant
+#How to connect to google assistant for NLP and automated Action
 
-# Please use Python 3.6 or lower to connect, we have verified the 3.7 will not work;
+#### Please use Python 3.6 or lower to connect, we have verified the 3.7 will not work;
 
 ## for windows platform please following the instruction
 project-aiy-voice-224701.txt
