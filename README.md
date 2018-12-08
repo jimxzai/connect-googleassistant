@@ -17,6 +17,20 @@ project-aiy-voice-224701_Linux.txt
 ## 4. create the credential locally for execution
 ## 5. run the app or run the python code
 
+### for app
+
+googlesamples-assistant-pushtotalk --project-id aiy-voice-224701 --device-model-id aiy-voice-224701-prototype-light-v1
+
+### for source code 
+
+https://github.com/googlesamples/assistant-sdk-python.git
+
+--for the source code:
+https://github.com/googlesamples/assistant-sdk-python/tree/master/google-assistant-sdk/googlesamples/assistant/grpc
+
+python -m pushtotalk --project-id aiy-voice-224701 --device-model-id aiy-voice-224701-prototype-light-v1
+
+
 
 # customization 
 ## use the excel sheet to define questions and load in action to publish
