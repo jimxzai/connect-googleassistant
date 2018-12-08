@@ -1,5 +1,17 @@
 #How to connect to google assistant for NLP and automated Action
 
+This is the verified detail steps on how to connect to Google assistant using gRpc. The following 3 environments have been tested:
+Windows 10; 
+Mac OSX mojave and 
+Ubuntu 16.04 LTS.  
+
+the customized action app has been verified from these 3 environments above
+plus Samsung S8, 
+Iphone X and 
+Google Home Mini.
+
+Samsung S8 we has also verified the Chinese version, but as the API/SDK is still under development preview stage, Chinese API is not yet released.
+
 #### Please use Python 3.6 or lower to connect, we have verified the 3.7 will not work;
 
 ## for windows platform please following the instruction
