@@ -44,6 +44,6 @@ python -m pushtotalk --project-id aiy-voice-224701 --device-model-id aiy-voice-2
 
 
 
-# customization 
-## use the excel sheet to define questions and load in action to publish
-## define the activation 
+## customization 
+### use the excel sheet to define questions and load in action to publish
+### define the activation 
